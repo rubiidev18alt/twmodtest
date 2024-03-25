@@ -1,14 +1,14 @@
-            - name: Publish to GitHub Pages
+             name: Publish to GitHub Pages Action
   # You may pin to the exact commit or the version.
-  # uses: tsunematsu21/actions-publish-gh-pages@c04b531c52b8f9d25c596bc6e6a7ddc116b2f3f8
-  uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
+  # uses: qoomon/actions--publish-to-github-pages@6a40eb09ac8c40658b68467787c0ae58764824c5
+  uses: qoomon/actions--publish-to-github-pages@v1.0.3
   with:
-    # The name of the directory that containing the content to be published
-    dir: # optional, default is ./
-    # The name of the remote branch that publishing source for GitHub Pages site
-    branch: pages # optional, default is gh-pages
-    # The remote repository that publishing source for GitHub Pages site, defaults to current repo and is formatted like 'user/repo-name'
-    repo: # optional
-    # The personal access token that authorize repo access
-    token: 
+    # Source Directory
+    GITHUB_PAGES_SOURCE_DIR: # optional, default is dist
+    # GitHub Pages Branch Name
+    GITHUB_PAGES_BRANCH: pages # optional, default is gh-pages
+    # If set to true this action will replace current GitHub Pages branch
+    GITHUB_PAGES_REPLACE: # optional
+    # Make use of context variable `secrets.GITHUB_TOKEN`
+    GITHUB_TOKEN: # optional, default is ${{ github.token }}
           
